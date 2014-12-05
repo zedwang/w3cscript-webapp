@@ -1,0 +1,33 @@
+<ion-view title="{{news.classname}}">
+    <ion-nav-bar class="bar-stable bar-assertive nav-title-slide-ios7">
+        <ion-nav-back-button class="button-icon icon  ion-arrow-left-c"></ion-nav-back-button>
+    </ion-nav-bar>
+  <ion-content has-header="true" padding="true">
+      <div class="list card">
+          <div class="item">
+              <h2>{{news.title}}</h2>
+              <p>{{news.befrom}}&nbsp;&nbsp;{{news.newstime}}&nbsp;&nbsp;{{news.onclick}}浏览</p>
+          </div>
+
+          <div class="item item-body" id="content">
+              <p ng-bind-html="news.newstext | to_trusted"></p>
+          </div>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+              <span class="tab-item" href="#">
+                  <i class="icon ion-thumbsup"></i>
+                  顶
+              </span>
+              <span class="tab-item" ng-click="showModal()">
+                  <i class="icon ion-chatbox"></i>
+                  评论
+              </span>
+              <span class="tab-item" href="#">
+                  <i class="icon ion-share"></i>
+                  分享
+              </span>
+          </div>
+      </div>
+  </ion-content>
+</ion-view>
+

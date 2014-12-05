@@ -1,0 +1,16 @@
+<ion-view title="文章列表">
+    <ion-nav-bar class="bar-stable bar-assertive nav-title-slide-ios7">
+        <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back"></ion-nav-back-button>
+    </ion-nav-bar>
+  <ion-content>
+      <ion-refresher on-refresh="refresh()"></ion-refresher>
+      <div class="list">
+          <a class="item item-thumbnail-left" ng-repeat="post in posts" href="#/tab/friend/{{post.classid}}/{{post.id}}">
+              <img src="{{post.titlepic == '' ? post.notimg : post.titlepic}}">
+              <h2>{{post.title}}</h2>
+              <p>{{post.smalltext}}</p>
+          </a>
+      </div>
+      <ion-infinite-scroll ng-if="isMore" icon="ion-loading-c" on-infinite="loadMoreData()" distance="1%"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

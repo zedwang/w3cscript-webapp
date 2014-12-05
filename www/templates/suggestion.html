@@ -1,0 +1,26 @@
+<ion-view title="意见反馈">
+    <ion-nav-bar class="bar-stable bar-assertive nav-title-slide-ios7">
+        <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back"></ion-nav-back-button>
+    </ion-nav-bar>
+  <ion-content has-header="true" padding="true">
+      <div class="list">
+          <form name="suggestionForm" ng-submit="doSuggest(visitor)">
+              <label class="item item-input">
+                  <textarea ng-model="visitor.content" placeholder="吐几句吧，你的吐槽就是我的动力" required></textarea>
+              </label>
+              <label class="item item-input">
+                  <input type="text" ng-model="visitor.name" placeholder="name" required/>
+              </label>
+              <label class="item item-input">
+                  <input type="email" ng-model="visitor.email" placeholder="Email" required/>
+              </label>
+              <label class="item item-input">
+                  <input type="tel" ng-model="visitor.phoneNo" placeholder="phone(非公开)"/>
+              </label>
+              <button class="button button-full button-positive" ng-disabled="suggestionForm.$invalid">
+                  提交
+              </button>
+          </form>
+      </div>
+  </ion-content>
+</ion-view>

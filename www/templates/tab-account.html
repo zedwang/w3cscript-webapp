@@ -1,0 +1,43 @@
+<ion-view title="设置">
+    <ion-nav-bar class="bar-stable bar-assertive nav-title-slide-ios7">
+        <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back"></ion-nav-back-button>
+    </ion-nav-bar>
+  <ion-content class="padding">
+      <div class="list">
+
+          <li class="item item-toggle">
+              是否推送
+              <label class="toggle toggle-assertive">
+                  <input type="checkbox">
+                  <div class="track">
+                      <div class="handle"></div>
+                  </div>
+              </label>
+          </li>
+          <li class="item item-toggle">
+              夜晚模式
+              <label class="toggle toggle-assertive">
+                  <input type="checkbox">
+                  <div class="track">
+                      <div class="handle"></div>
+                  </div>
+              </label>
+          </li>
+          <a class="item item-icon-right" href="javascript:;" ng-click="updateApp()">
+              检查更新
+          </a>
+          <a class="item item-icon-right" href="#/tab/account/suggestion">
+              <i class="icon ion-ios7-arrow-right"></i>
+              意见反馈
+          </a>
+          <a class="item item-icon-right" href="#/tab/account/about">
+              <i class="icon ion-ios7-arrow-right"></i>
+              关于W3Cscript
+          </a>
+          <a class="item item-icon-right" href="javascript:;" ng-click="exit()">
+              退出
+          </a>
+      </div>
+
+  </ion-content>
+</ion-view>
