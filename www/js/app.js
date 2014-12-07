@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('w3cscript', ['ionic', 'w3cscript.controllers', 'w3cscript.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -30,65 +30,65 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         $stateProvider
 
             // setup an abstract state for the tabs directive
-            .state('tab', {
-                url: "/tab",
+            .state('menu', {
+                url: "/menu",
                 abstract: true,
-                templateUrl: "templates/tabs.html"
+                templateUrl: "templates/menu.html"
             })
 
             // Each tab has its own nav history stack:
 
-            .state('tab.dash', {
-                url: '/dash',
+            .state('menu.index', {
+                url: '/index',
                 views: {
-                    'tab-dash': {
-                        templateUrl: 'templates/tab-dash.html',
-                        controller: 'DashCtrl'
+                    'menu-index': {
+                        templateUrl: 'templates/menu-index.html',
+                        controller: 'indexCtrl'
                     }
                 }
             })
 
-            .state('tab.friends', {
-                url: '/friends/:classId',
+            .state('menu.article', {
+                url: '/article/:classId',
                 views: {
-                    'tab-friends': {
-                        templateUrl: 'templates/tab-friends.html',
-                        controller: 'FriendsCtrl'
+                    'menu-article': {
+                        templateUrl: 'templates/menu-article.html',
+                        controller: 'ArticleCtrl'
                     }
                 }
             })
-            .state('tab.friend-detail', {
-                url: '/friend/:classId/:id',
+            .state('menu.article-detail', {
+                url: '/detail/:classId/:id',
                 views: {
-                    'tab-friends': {
-                        templateUrl: 'templates/friend-detail.html',
-                        controller: 'FriendDetailCtrl'
+                    'menu-article': {
+                        templateUrl: 'templates/article-detail.html',
+                        controller: 'ArticleDetailCtrl'
                     }
                 }
             })
 
-            .state('tab.account', {
+            .state('menu.account', {
                 url: '/account',
                 views: {
-                    'tab-account': {
-                        templateUrl: 'templates/tab-account.html',
+                    'menu-account': {
+                        templateUrl: 'templates/menu-account.html',
                         controller: 'AccountCtrl'
                     }
                 }
             })
-            .state('tab.account-detail', {
+            .state('menu.account-detail', {
                 url: '/account/about',
                 views: {
-                    'tab-account': {
+                    'menu-account': {
                         templateUrl: 'templates/about.html',
                         controller: 'AccountCtrl'
                     }
                 }
             })
-            .state('tab.suggestion', {
+            .state('menu.suggestion', {
                 url: '/account/suggestion',
                 views: {
-                    'tab-account': {
+                    'menu-account': {
                         templateUrl: 'templates/suggestion.html',
                         controller: 'AccountCtrl'
                     }
@@ -96,7 +96,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
             });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/menu/index');
 
 });
 
