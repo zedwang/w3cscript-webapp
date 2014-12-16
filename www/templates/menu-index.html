@@ -4,17 +4,10 @@
   </ion-nav-bar>
   <ion-content class="padding">
       <ion-list>
-          <ion-item ng-repeat="class in bclass" type="item-text-wrap" href="#/tab/friends/{{class.bclass.bclassid}}">
+          <ion-item ng-repeat="class in bclass" type="item-text-wrap" href="#/menu/article/{{class.bclass.bclassid}}">
               {{class.bclass.bclassname}}
           </ion-item>
       </ion-list>
 
   </ion-content>
 </ion-view>
-<style>
-    .logoImg {
-        margin: 0 auto;
-        background: url("img/homeLogo.png") no-repeat center;
-        background-size: 40%;
-    }
-</style>

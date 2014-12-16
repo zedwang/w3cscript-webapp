@@ -1,6 +1,6 @@
-angular.module('starter.controllers', [])
+angular.module('w3cscript.controllers', [])
 
-.controller('DashCtrl', function($scope,$http,$rootScope) {
+.controller('indexCtrl', function($scope,$http,$rootScope) {
         ionic.Platform.isFullScreen = true;
         var url = "http://www.w3cscript.com/e/api/getNewsClass.php";
         $http({
@@ -13,7 +13,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('FriendsCtrl', function($scope,$stateParams, $http,$rootScope) {
+.controller('ArticleCtrl', function($scope,$stateParams, $http,$rootScope) {
         var classId = $stateParams.classId;
         var url = "http://www.w3cscript.com/e/api/getNewsList.php";
         var _page = 1;
@@ -57,7 +57,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, $http,$ionicModal,$rootScope,$ionicLoading,$ionicNavBarDelegate) {
+.controller('ArticleDetailCtrl', function($scope, $stateParams, $http,$ionicModal,$rootScope,$ionicLoading,$ionicNavBarDelegate) {
         $ionicLoading.show({
             template: '拼命加载中...'
         });

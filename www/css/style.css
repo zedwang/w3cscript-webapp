@@ -2,3 +2,8 @@
 .img-responsive {
     width: 100%;
 }
+.logoImg {
+    margin: 0 auto;
+    background: url("../img/homeLogo.png") no-repeat center;
+    background-size: 40%;
+}
